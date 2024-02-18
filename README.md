@@ -7,3 +7,6 @@ A app shows what constellation you're looking at
 - Calculates the right ascension, declination and hour angle
 - Indicates what constellation you're looking at
 - Extra dark mode
+
+![image]((https://github.com/AndyTung401/AstroCompass/blob/main/IMG_4798.jpg)https://github.com/AndyTung401/AstroCompass/blob/main/IMG_4798.jpg)
+![image]((https://github.com/AndyTung401/AstroCompass/blob/main/IMG_4798.jpg)https://github.com/AndyTung401/AstroCompass/blob/main/IMG_4810.jpg)
