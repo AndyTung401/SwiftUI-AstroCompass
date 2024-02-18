@@ -8,6 +8,6 @@ A app shows what constellation you're looking at
 - Indicates what constellation you're looking at
 - Extra dark mode
 
-| :---:   | :---: |
+
 ![image](https://github.com/AndyTung401/AstroCompass/blob/main/IMG_4798.jpg) | ![image](https://github.com/AndyTung401/AstroCompass/blob/main/IMG_4798.jpg)
 | :---:   | :---: |
