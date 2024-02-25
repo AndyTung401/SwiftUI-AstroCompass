@@ -14,7 +14,4 @@ Light Mode | Dark Mode
 ![image](https://github.com/AndyTung401/AstroCompass/blob/main/IMG_4798.jpg) | ![image](https://github.com/AndyTung401/AstroCompass/blob/main/IMG_4810.jpg)
 
 
-<video src='https://github.com/AndyTung401/AstroCompass/assets/109213867/5fae0918-9a3a-4c4c-89af-d303f7ef2467' width=180/>
-
-https://github.com/AndyTung401/AstroCompass/assets/109213867/5fae0918-9a3a-4c4c-89af-d303f7ef2467
-
+<video src='https://github.com/AndyTung401/AstroCompass/assets/109213867/5fae0918-9a3a-4c4c-89af-d303f7ef2467'/>
