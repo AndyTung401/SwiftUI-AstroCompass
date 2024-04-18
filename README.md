@@ -15,3 +15,6 @@ Light Mode | Dark Mode
 
 
 <video src='https://github.com/AndyTung401/AstroCompass/assets/109213867/5fae0918-9a3a-4c4c-89af-d303f7ef2467'/>
+
+The CoreLocation codes refers to Andrew11US/AF-Swift-Tutorials
+https://github.com/Andrew11US/AF-Swift-Tutorials/blame/main/core-location/core-location/ContentView.swift
