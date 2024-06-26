@@ -10,9 +10,7 @@ import CoreMotion
 
 
 struct motionView: View {
-    let motionManager = CMMotionManager()
-    let queue = OperationQueue()
-    @State private var pitch = Double.zero
+    @Binding var pitch:Double
 
     var body: some View {
         HStack{
@@ -25,19 +23,5 @@ struct motionView: View {
         .frame(width: 230)
         .font(.system(size: 35))
         .fontWeight(.light)
-        .onAppear
-        {
-            self.motionManager.startDeviceMotionUpdates(to: self.queue) { (data: CMDeviceMotion?, error: Error?) in
-                guard let data = data else { return }
-                let attitude: CMAttitude = data.attitude
-                DispatchQueue.main.async {
-                    self.pitch = attitude.pitch
-                }
-            }
-        }//.onappear
     }//view
 }//struct
-
-#Preview {
-    motionView()
-}

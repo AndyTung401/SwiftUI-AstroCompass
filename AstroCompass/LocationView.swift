@@ -114,13 +114,6 @@ struct LocationView: View {
                 Text("\(degreeFormatter(locationViewModel.lat)) \(locationViewModel.lat<0 ? "S" : "N")").frame(width: 125, alignment: .trailing)
                 Text("\(degreeFormatter(locationViewModel.lon)) \(locationViewModel.lon<0 ? "W" : "E")").frame(width: 125, alignment: .leading)
             }
-            
-            //Text("\(String(format: "%.1f", locationViewModel.alt)) m Elevation")
-            
-            //HStack(spacing: 15){
-                //Text("\(String(format:"%.2f", locationViewModel.speed<0 ? 0:locationViewModel.speed)) m/s").frame(width: 100, alignment: .trailing)
-                //Text("\(String(format:"%.2f", locationViewModel.speed<0 ? 0:locationViewModel.speed*3.6)) km/h").frame(width: 100, alignment: .leading)
-            //}
         }.font(.title3)
     }
 }

@@ -12,9 +12,7 @@ import SwiftUI
 
 struct calculationView: View{
     @ObservedObject private var locationViewModel = LocationViewModel()
-    @State private var pitch = Double.zero
-    let motionManager = CMMotionManager()
-    let queue = OperationQueue()
+    @Binding var pitch: Double
     @State var calc = (JDN:"", GST:"", LST:"", HA:(HAh:"", HAm:"", HAs:""), RA:(RA:0.0, RAh:"", RAm:"", RAs:""), Dec:(Dec:0.0, Dech:"", Decm:"", Decs:"", DecSign:""))
     var body: some View{
         VStack{
@@ -43,7 +41,7 @@ struct calculationView: View{
                 
                 Divider().overlay(.white).padding(.top, -5).frame(width: 300)
                 
-                starView()
+                starView(pitch: $pitch)
                     .padding(.vertical, 15)
             }
             .padding(20)
@@ -68,18 +66,10 @@ struct calculationView: View{
                 Text("s")
             }
         }
-        .onAppear {
-            self.motionManager.startDeviceMotionUpdates(to: self.queue) { (data: CMDeviceMotion?, error: Error?) in
-                guard let data = data else { return }
-                let attitude: CMAttitude = data.attitude
-
-                DispatchQueue.main.async {
-                    self.pitch = attitude.pitch
-                    calc = calculation(locationViewModel.azi, locationViewModel.lon, locationViewModel.lat, pitch)
-                }
-            }
-        }//.onappear
+        .onChange(of: pitch) { _, pitch in
+            calc = calculation(locationViewModel.azi, locationViewModel.lon, locationViewModel.lat, pitch)
+        }
     }
 
 }
-#Preview{calculationView()}
+#Preview{calculationView(pitch: ContentView().$pitch)}
